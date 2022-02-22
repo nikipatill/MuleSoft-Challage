@@ -1,0 +1,26 @@
+import javax.swing.*;
+
+class movieinfo{
+    JFrame f;
+    movieinfo(){
+        f = new JFrame();
+        String data[][]={
+                {" Passengers "," Chris Pratt "," Jenifer Lawrence "," Morten Tyldum "},
+                {" Oblivion "," Tom Cruise ","julia "," Joseph Kosinski "},
+                {" Edge of Tomorrow "," Tom Cruise "," Emily Blunt "," Doug Liman "}
+        };
+        String column[]={" Movie "," Actor "," Actress "," Director "};
+        JTable jt = new JTable(data,column);
+        jt.setBounds(30,40,200,300);
+        JScrollPane sp = new JScrollPane(jt);
+        f.add(sp);
+        f.setSize(300,400);
+        f.setVisible(true);
+    }
+}
+public class Main {
+
+    public static void main(String[] args) {
+        new movieinfo();
+    }
+}
